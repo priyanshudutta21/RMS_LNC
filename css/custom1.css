@@ -1,0 +1,110 @@
+body{
+    background-color: rgb(253, 253, 253);
+
+}
+
+.vertical-nav{
+    min-width: 17rem;
+    height: 100%;
+    position: fixed;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+     top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    
+}
+
+#sidebar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#sidebar::-webkit-scrollbar-thumb
+{
+	background-color: #2c99ff;
+	border-radius: 10px;
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(0, 0, 0, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(0, 0, 0, .2) 50%,
+											  rgba(0, 0, 0, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+	background-color: #F5F5F5;
+  }
+   
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+  }
+   
+body::-webkit-scrollbar-thumb {
+    background-color: #F90;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+  }
+
+#content{
+    width: calc(100% -17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+}
+#content.active{
+    width: 100%;
+    margin: 0;
+}
+
+#sidebar.active{
+    margin-left: -17rem;
+}
+.nav-link:hover{
+    background: #c4c4c4;
+
+}
+
+#pname{
+    width: 100%;
+    height: 2rem;
+    border: 1px solid rgb(0, 89, 255);
+}
+
+@media (max-width:768px){
+    #sidebar{
+        margin-left: -17rem;
+    }
+    #sidebar.active{
+        margin-left: 0;
+    }
+
+    #content{
+        width: 100%;
+        margin: 0;
+    }
+   #content.active{
+       width: calc(100%-17rem);
+       margin-left: 17rem;
+   }
+  
+}
